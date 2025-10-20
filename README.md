@@ -1,7 +1,18 @@
 # AI-ML-Foundation
 This repository represents the basic and fundamentals to advanced concepts of AI and ML. It covers a wide range of topics including data preprocessing, exploratory data analysis, model building, evaluation, and deployment using popular libraries such as NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, and PyTorch.
 
-## Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)
+# Index
+
+- [List of Project Branches](#list-of-project-branches)
+- [Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)](#managing-multiple-project-folders-in-a-single-git-repository-one-branch-per-folder-using-worktrees)
+
+
+# List of Project Branches
+### 1. [Python For ML](python-for-ml)
+This branch contains resources and code examples for learning Python specifically tailored for Machine Learning (ML) applications. It covers fundamental Python programming concepts, libraries commonly used in ML, and practical implementations of ML algorithms.
+
+
+# Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)
 
 This repository contains multiple independent project folders.
 Each folder is tied to its **own Git branch**, using [Git Worktrees](https://git-scm.com/docs/git-worktree). This keeps the remote branches clean while letting you organize your local machine with separate folders.
@@ -84,55 +95,54 @@ git worktree add "./New-Project" new-project
 ```
 
 ---
----
 
-### 🌿 Committing From main Branch and Remove worktree gitlink for The Folder
+### 🌿 Committing From main Branch and Remove Worktree Gitlink For The Folder
 
 1. Add the folder to .gitignore on main(if not done already)
 
-Open .gitignore in the root of your repo (on the main branch) and add:
+    Open .gitignore in the root of your repo (on the main branch) and add:
 
-```bash
-/Python For ML
-```
+    ```bash
+    /Python For ML
+    ```
 
+    Save it, then commit:
 
-Save it, then commit:
-
-```bash
-git add .gitignore
-git commit -m "Ignore 'Python For ML' folder on main"
-git push origin main
-```
+    ```bash
+    git add .gitignore
+    git commit -m "Ignore 'Python For ML' folder on main"
+    git push origin main
+    ```
 
 2. Remove the accidentally tracked folder reference(if already committed)
 
-The “→” icon you saw on GitHub main means the folder got committed as a gitlink. To remove that cleanly:
+    The “→” icon you saw on GitHub main means the folder got committed as a gitlink. To remove that cleanly:
 
-```bash
-git rm -r --cached "Python For ML"
-```
+    ```bash
+    git rm -r --cached "Python For ML"
+    ```
 
-Notice the quotes — they’re essential because of the spaces.
+    Notice the quotes — they’re essential because of the spaces.
 
-Then commit and push:
+    Then commit and push:
 
-```bash
-git commit -m "Remove worktree gitlink for 'Python For ML' from main"
-git push origin main
-```
+    ```bash
+    git commit -m "Remove worktree gitlink for 'Python For ML' from main"
+    git push origin main
+    ```
 
 3. Verify
 
-You can check locally:
+    You can check locally:
 
-```bash
-git ls-tree main
-```
+    ```bash
+    git ls-tree main
+    ```
 
-The entry for Python For ML should be gone.
+    The entry for Python For ML should be gone.
 
-And on GitHub, refresh the main branch — that folder with the right arrow should disappear. Only your actual root files (e.g., README.md) should remain.
+    And on GitHub, refresh the main branch — that folder with the right arrow should disappear. Only your actual root files (e.g., README.md)   should remain.
+
 
 ---
 
@@ -170,4 +180,3 @@ This approach is ideal if you want **one repo** but **clean, isolated project br
 
 ---
 
-Would you like me to add a short section explaining how to switch back to a worktree after restarting your computer (to avoid common path errors)?
