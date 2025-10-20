@@ -1,5 +1,5 @@
 # AI-ML-Foundation
-
+This repository represents the basic and fundamentals to advanced concepts of AI and ML. It covers a wide range of topics including data preprocessing, exploratory data analysis, model building, evaluation, and deployment using popular libraries such as NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, and PyTorch.
 
 ## Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)
 
