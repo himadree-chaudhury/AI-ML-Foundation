@@ -1,0 +1,7 @@
+Hello, World!
+This is a new line.
+This line will be appended.
+Appending another line.
+Line 1
+Line 2
+Line 3
