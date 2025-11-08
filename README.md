@@ -1,16 +1,17 @@
-# AI-ML-Foundation
+# 🤖 AI-ML-Foundation
+
 This repository represents the basic and fundamentals to advanced concepts of AI and ML. It covers a wide range of topics including data preprocessing, exploratory data analysis, model building, evaluation, and deployment using popular libraries such as NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, and PyTorch.
 
-# Index
+# 📇 Index
 
 - [List of Project Branches](#list-of-project-branches)
 - [Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)](#managing-multiple-project-folders-in-a-single-git-repository-one-branch-per-folder-using-worktrees)
 
-
 # List of Project Branches
-### 1. [Python For ML](python-for-ml)
-This branch contains resources and code examples for learning Python specifically tailored for Machine Learning (ML) applications. It covers fundamental Python programming concepts, libraries commonly used in ML, and practical implementations of ML algorithms.
 
+### 1. [Python For ML](https://github.com/himadree-chaudhury/AI-ML-Foundation/tree/python-for-ml)
+
+This branch contains resources and code examples for learning Python specifically tailored for Machine Learning (ML) applications. It covers fundamental Python programming concepts, libraries commonly used in ML, and practical implementations of ML algorithms.
 
 # Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)
 
@@ -29,9 +30,9 @@ AI-ML/                    ← Main repo
 
 On GitHub:
 
-* The `python-for-ml` branch only contains the contents of `Python For ML/`
-* The `data-engineering` branch only contains the contents of `Data Engineering/`
-* The `main` branch does **not** contain these folders (they're in `.gitignore` locally)
+- The `python-for-ml` branch only contains the contents of `Python For ML/`
+- The `data-engineering` branch only contains the contents of `Data Engineering/`
+- The `main` branch does **not** contain these folders (they're in `.gitignore` locally)
 
 ---
 
@@ -100,49 +101,48 @@ git worktree add "./New-Project" new-project
 
 1. Add the folder to .gitignore on main(if not done already)
 
-    Open .gitignore in the root of your repo (on the main branch) and add:
+   Open .gitignore in the root of your repo (on the main branch) and add:
 
-    ```bash
-    /Python For ML
-    ```
+   ```bash
+   /Python For ML
+   ```
 
-    Save it, then commit:
+   Save it, then commit:
 
-    ```bash
-    git add .gitignore
-    git commit -m "Ignore 'Python For ML' folder on main"
-    git push origin main
-    ```
+   ```bash
+   git add .gitignore
+   git commit -m "Ignore 'Python For ML' folder on main"
+   git push origin main
+   ```
 
 2. Remove the accidentally tracked folder reference(if already committed)
 
-    The “→” icon you saw on GitHub main means the folder got committed as a gitlink. To remove that cleanly:
+   The “→” icon you saw on GitHub main means the folder got committed as a gitlink. To remove that cleanly:
 
-    ```bash
-    git rm -r --cached "Python For ML"
-    ```
+   ```bash
+   git rm -r --cached "Python For ML"
+   ```
 
-    Notice the quotes — they’re essential because of the spaces.
+   Notice the quotes — they’re essential because of the spaces.
 
-    Then commit and push:
+   Then commit and push:
 
-    ```bash
-    git commit -m "Remove worktree gitlink for 'Python For ML' from main"
-    git push origin main
-    ```
+   ```bash
+   git commit -m "Remove worktree gitlink for 'Python For ML' from main"
+   git push origin main
+   ```
 
 3. Verify
 
-    You can check locally:
+   You can check locally:
 
-    ```bash
-    git ls-tree main
-    ```
+   ```bash
+   git ls-tree main
+   ```
 
-    The entry for Python For ML should be gone.
+   The entry for Python For ML should be gone.
 
-    And on GitHub, refresh the main branch — that folder with the right arrow should disappear. Only your actual root files (e.g., README.md)   should remain.
-
+   And on GitHub, refresh the main branch — that folder with the right arrow should disappear. Only your actual root files (e.g., README.md) should remain.
 
 ---
 
@@ -160,23 +160,54 @@ Remove a worktree:
 git worktree remove "./Data-Engineering"
 ```
 
-Detach a branch but keep files:
+Detach a worktree (force removal if needed):
 
 ```bash
 git worktree remove --force "./Data-Engineering"
 ```
 
+To undo the commit and keep file changes(Local):
+
+```bash
+git reset --soft HEAD^
+```
+
+To undo the commit and discard all changes(Local):
+
+```bash
+git reset --hard HEAD^
+```
+
+To undo a commit that has already been pushed to a remote repository:
+
+```bash
+git revert HEAD
+```
+
+To delete a local branch(switch to another branch first):
+
+```bash
+git branch -d <branch-name>
+```
+
+for force use `-D` instead of `-d`.
+
+To delete a remote branch:
+
+```bash
+git push <remote-name> --delete <branch-name>
+```
+
+Typically, the `<remote-name>` is `origin`.
+
 ---
 
 ### 📝 Notes
 
-* Each folder is **independent**. Commits inside one don’t affect the others.
-* Push and pull inside each project folder as if it were its own repo.
-* The root `README.md` stays in `main` and can document the overall structure.
-
----
+- Each folder is **independent**. Commits inside one don’t affect the others.
+- Push and pull inside each project folder as if it were its own repo.
+- The root `README.md` stays in `main` and can document the overall structure.
 
 This approach is ideal if you want **one repo** but **clean, isolated project branches**, without juggling multiple local clones.
 
 ---
-
