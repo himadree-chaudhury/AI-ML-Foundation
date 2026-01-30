@@ -1,0 +1,3 @@
+# Unsupervised Learning
+
+This directory contains implementations of various unsupervised learning algorithms using popular machine learning libraries such as Scikit-learn. The notebooks cover a range of algorithms including k-means clustering, hierarchical clustering, DBSCAN, and dimensionality reduction techniques like PCA and t-SNE, applied to different datasets for clustering and visualization tasks.
