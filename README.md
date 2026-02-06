@@ -11,6 +11,10 @@ This repository represents the basic and fundamentals to advanced concepts of AI
 
 ### 1. [Python For ML](https://github.com/himadree-chaudhury/AI-ML-Foundation/tree/python-for-ml)
 
+### 2. [Machine Learning](https://github.com/himadree-chaudhury/AI-ML-Foundation/tree/machine-learning)
+
+### 3. [Deep Learning](https://github.com/himadree-chaudhury/AI-ML-Foundation/tree/deep-learning)
+
 This branch contains resources and code examples for learning Python specifically tailored for Machine Learning (ML) applications. It covers fundamental Python programming concepts, libraries commonly used in ML, and practical implementations of ML algorithms.
 
 # Managing Multiple Project Folders in a Single Git Repository (One Branch per Folder using Worktrees)
@@ -24,14 +28,16 @@ Each folder is tied to its **own Git branch**, using [Git Worktrees](https://git
 AI-ML/                    ← Main repo
 │
 ├─ Python For ML/         ← Local folder for 'python-for-ml' branch
-├─ Data Engineering/      ← Local folder for 'data-engineering' branch
+├─ Machine Learning/      ← Local folder for 'machine-learning' branch
+├─ Deep Learning/         ← Local folder for 'deep-learning' branch
 └─ README.md              ← Lives only in the main branch
 ```
 
 On GitHub:
 
 - The `python-for-ml` branch only contains the contents of `Python For ML/`
-- The `data-engineering` branch only contains the contents of `Data Engineering/`
+- The `machine-learning` branch only contains the contents of `Machine Learning/`
+- The `deep-learning` branch only contains the contents of `Deep Learning/`
 - The `main` branch does **not** contain these folders (they're in `.gitignore` locally)
 
 ---
