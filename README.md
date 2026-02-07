@@ -1,3 +1,3 @@
 # Deep Learning
 
-This directory contains resources and projects related to Deep Learning, a subset of machine learning focused on neural networks with many layers. Here, you will find tutorials, code examples, and datasets to help you understand and implement deep learning models.
+This directory contains resources and projects related to Deep Learning, a subset of machine learning focused on neural networks with many layers. Here, tutors and students can find notebooks, code implementations, and exercises to enhance their understanding of deep learning concepts and techniques. The content is organized into modules, each covering different aspects of deep learning, from basic neural networks to advanced architectures and applications.
